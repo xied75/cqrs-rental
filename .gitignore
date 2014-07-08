@@ -1,0 +1,41 @@
+# Visual Studio Build Folders
+bin/
+csx/
+obj/
+packages/
+Profiles/
+
+# Visual Studio Build Files
+*.opensdf
+*.sdf
+*.suo
+*.user
+*.cscfg
+*.csdef
+
+# My local only repo, to keep those config files
+local/
+
+# My hand made files, by cspack.exe
+hand/
+
+# Upgrade to 1.8
+UpgradeLog.XML
+_UpgradeReport_Files/
+
+# No idea about this file, might be powershell comlets created
+deploymentSettings.json
+
+# Web Role MVC Folder
+App_Data/
+
+# Backup
+Backup/
+
+# DB Project
+*.dbmdl
+
+# misc
+*.dgml
+UpgradeLog.htm
+UpgradeLog2.htm
