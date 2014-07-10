@@ -1,0 +1,20 @@
+/* Code */
+
+1. We re-used CQRS-Journey source code (tag V1-pseudo-prod)
+  Infrastructure Projects
+    Infrastructure
+
+2. Repository Pattern is ignored for now, using simply Service instead.
+
+/* Design */
+
+1. We assume only one Rental Provider.
+
+2. We simplify User/Customer handling to a single CustomerName for now.
+
+3. We assume max rent per day on any car is 9999.99.
+
+4. We assume UK Car Number Plate to be varchar(10).
+
+5. We assume extending renting period only goes forward, not backwards,
+   and it could have different price due to discount or flux.
