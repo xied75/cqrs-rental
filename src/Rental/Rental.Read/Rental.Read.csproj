@@ -31,6 +31,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugLocal|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\DebugLocal\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Dapper">
       <HintPath>..\..\..\packages\Dapper.1.26\lib\net45\Dapper.dll</HintPath>
@@ -61,6 +70,7 @@
     <Compile Include="Command\ChangeBooking.cs" />
     <Compile Include="Command\ExtendBooking.cs" />
     <Compile Include="Command\MakeBooking.cs" />
+    <Compile Include="Handlers\MakeBookingHandler.cs" />
     <Compile Include="ICarSearchService.cs" />
     <Compile Include="Model\CarView.cs" />
     <Compile Include="Model\RentedDates.cs" />

@@ -26,11 +26,21 @@ namespace WorkerRoleCommandProcessor
     using Infrastructure.Sql.Blob;
     using Infrastructure.Sql.Database;
     using Infrastructure.Sql.EventSourcing;
+    using Infrastructure.Sql.Processes;
+    using Microsoft.Practices.Unity;
+
+#if LOCAL
     using Infrastructure.Sql.Messaging;
     using Infrastructure.Sql.Messaging.Handling;
     using Infrastructure.Sql.Messaging.Implementation;
-    using Infrastructure.Sql.Processes;
-    using Microsoft.Practices.Unity;
+
+#else
+    using Infrastructure.Azure;
+    using Infrastructure.Azure.EventSourcing;
+    using Infrastructure.Azure.Messaging;
+    using Infrastructure.Azure.Messaging.Handling;
+    using Microsoft.WindowsAzure;
+#endif
 
     public sealed class RentalCommandProcessor : IDisposable
     {
