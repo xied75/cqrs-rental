@@ -14,7 +14,5 @@
         CarView GetCarViewByReg(string reg);
 
         IEnumerable<RentedDates> GetCarRentedDatesByModel(string model);
-
-        void Dispose();
     }
 }
